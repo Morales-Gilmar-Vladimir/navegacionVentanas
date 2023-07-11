@@ -1,0 +1,6 @@
+Nissan,2018,118
+Chevrolette,2020,150
+asd,2012,123
+asd,1111,1574
+qwewqe,222,3245345
+cvbcvb,333,444
