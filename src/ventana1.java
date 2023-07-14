@@ -83,7 +83,7 @@ public class ventana1 {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("ventana1");
+        JFrame frame = new JFrame("Ventana1");
         frame.setContentPane(new ventana1().rootPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
