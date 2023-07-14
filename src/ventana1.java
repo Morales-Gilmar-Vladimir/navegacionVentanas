@@ -8,7 +8,7 @@ public class ventana1 {
     private JButton guardarButton;
     private JButton cargarButton;
     private JTextField marcaField;
-    private JTextField añoField;
+    private JTextField anioField;
     private JTextField cilindrajeField;
     private JButton backButton;
 
@@ -17,7 +17,7 @@ public class ventana1 {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String marca = marcaField.getText();
-                int año = Integer.parseInt(añoField.getText());
+                int año = Integer.parseInt(anioField.getText());
                 int cilindraje = Integer.parseInt(cilindrajeField.getText());
 
                 guardarDatos(marca, año, cilindraje);
@@ -37,8 +37,8 @@ public class ventana1 {
                 frame2.setVisible(false);
 
                 JFrame frame1 = new JFrame("Ventana 2");
-                ventana2 ventana2 = new ventana2();
-                frame1.setContentPane(ventana2.rootPanel);
+                ventana2 segventana = new ventana2();
+                frame1.setContentPane(segventana.rootPanel);
                 frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame1.pack();
                 frame1.setVisible(true);
@@ -71,7 +71,7 @@ public class ventana1 {
                     int cilindraje = Integer.parseInt(datos[2]);
 
                     marcaField.setText(marca);
-                    añoField.setText(String.valueOf(año));
+                    anioField.setText(String.valueOf(año));
                     cilindrajeField.setText(String.valueOf(cilindraje));
 
                     System.out.println("Datos cargados correctamente desde el archivo.");
@@ -83,29 +83,10 @@ public class ventana1 {
     }
 
     public static void main(String[] args) {
-        JFrame frame1 = new JFrame("Ventana 1");
-        ventana1 ventana1 = new ventana1();
-        frame1.setContentPane(ventana1.rootPanel);
-        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame1.pack();
-        frame1.setVisible(true);
-
-        JButton nextButton = new JButton("Siguiente");
-        nextButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame1.setVisible(false);
-                JFrame frame2 = new JFrame("Ventana 2");
-                ventana2 ventana2 = new ventana2();
-                frame2.setContentPane(ventana2.rootPanel);
-                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame2.pack();
-                frame2.setVisible(true);
-            }
-        });
-
-        frame1.getContentPane().add(nextButton);
+        JFrame frame = new JFrame("ventana1");
+        frame.setContentPane(new ventana1().rootPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
-
-
 }

@@ -31,36 +31,36 @@ public class ventana2 {
                 cargarDatos();
             }
         });
+
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame2 = (JFrame) SwingUtilities.getWindowAncestor(rootPanel);
-                frame2.setVisible(false);
+                JFrame frame1 = (JFrame) SwingUtilities.getWindowAncestor(rootPanel);
+                frame1.setVisible(false);
 
-                JFrame frame1 = new JFrame("Ventana 1");
-                ventana1 ventana1 = new ventana1();
-                frame1.setContentPane(ventana1.rootPanel);
-                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame1.pack();
-                frame1.setVisible(true);
+                JFrame frame2 = new JFrame("Ventana 1");
+                ventana1 ventanaPrincipal = new ventana1();
+                frame2.setContentPane(ventanaPrincipal.rootPanel);
+                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.pack();
+                frame2.setVisible(true);
             }
         });
+
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame2 = (JFrame) SwingUtilities.getWindowAncestor(rootPanel);
-                frame2.setVisible(false);
+                JFrame frame1 = (JFrame) SwingUtilities.getWindowAncestor(rootPanel);
+                frame1.setVisible(false);
 
-                JFrame frame1 = new JFrame("Ventana 3");
-                ventana3 ventana3 = new ventana3();
-                frame1.setContentPane(ventana3.rootPanel);
-                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame1.pack();
-                frame1.setVisible(true);
+                JFrame frame2 = new JFrame("Ventana 3");
+                ventana3 terventana = new ventana3();
+                frame2.setContentPane(terventana.rootPanel);
+                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.pack();
+                frame2.setVisible(true);
             }
         });
-
-
     }
 
     private void guardarDatos(String marca, int año, int cilindraje) {

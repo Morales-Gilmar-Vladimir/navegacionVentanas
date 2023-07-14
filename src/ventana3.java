@@ -31,32 +31,34 @@ public class ventana3 {
                 cargarDatos();
             }
         });
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame3 = (JFrame) SwingUtilities.getWindowAncestor(rootPanel);
-                frame3.setVisible(false);
 
-                JFrame frame1 = new JFrame("Ventana 2");
-                ventana2 ventana2 = new ventana2();
-                frame1.setContentPane(ventana2.rootPanel);
-                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame1.pack();
-                frame1.setVisible(true);
-            }
-        });
-        nextButton.addActionListener(new ActionListener() {
+        backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame2 = (JFrame) SwingUtilities.getWindowAncestor(rootPanel);
                 frame2.setVisible(false);
 
-                JFrame frame5 = new JFrame("Ventana 4");
-                ventana4 ventana4 = new ventana4();
-                frame5.setContentPane(ventana4.rootPanel);
-                frame5.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame5.pack();
-                frame5.setVisible(true);
+                JFrame frame1 = new JFrame("Ventana 2");
+                ventana2 segventana = new ventana2();
+                frame1.setContentPane(segventana.rootPanel);
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame1.pack();
+                frame1.setVisible(true);
+            }
+        });
+
+        nextButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame1 = (JFrame) SwingUtilities.getWindowAncestor(rootPanel);
+                frame1.setVisible(false);
+
+                JFrame frame2 = new JFrame("Ventana 4");
+                ventana4 cuarventana = new ventana4();
+                frame2.setContentPane(cuarventana.rootPanel);
+                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.pack();
+                frame2.setVisible(true);
             }
         });
     }
